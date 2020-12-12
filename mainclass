@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class MainClass {
+   public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double a,b,c,d,D,x1,x2;
+        System.out.println("Введите значение a");//Советую 1
+        a = in.nextDouble();
+        System.out.println("a не равен нулю:2" +(a != 0));
+        if (a==0) {
+             System.out.println("Значение неверно");
+             System.exit(0);
+        }
+        System.out.println("Введите значение b");//Советую -8
+        b= in.nextDouble();
+        System.out.println("Введите значение с");//Советую 15
+        c = in.nextDouble();
+        D= b*b-(4*a*c);
+        if (D<0){
+             System.out.println("Дискриминант отрицателен. Попрбуйте другие значения a,b,c");
+             System.exit(0);
+        }
+        if (D>0){
+             x1=(-b+Math.sqrt(D))/(2*a);
+             x2=(-b-Math.sqrt(D))/(2*a);
+             System.out.printf("x1=%2f",x1);
+             System.out.printf("x2=%2f",x2);
+        }
+
+    }}
+
